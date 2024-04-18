@@ -1,9 +1,8 @@
 "use client";
-import Image from "next/image";
 import { AuroraBackground } from "@/components/aurora-background";
 import Header from "./header";
-import { motion } from "framer-motion";
 import About from "./about";
+import Projects from "./projects";
 
 export default function Home() {
     return (
@@ -13,7 +12,10 @@ export default function Home() {
                     <Header />
                 </section>
             </AuroraBackground>
-            <About />
+            <div className="flex flex-col px-16 space-y-40">
+                <About />
+                <Projects />
+            </div>
         </main>
     );
 }
