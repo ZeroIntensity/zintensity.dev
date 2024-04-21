@@ -6,7 +6,7 @@ import Support from "./support";
 import { ReactNode } from "react";
 
 const Padded = ({ children }: { children: ReactNode }) => (
-    <div className="px-16">{children}</div>
+    <div className="px-8 lg:px-16">{children}</div>
 );
 export default function Home() {
     return (
@@ -24,6 +24,7 @@ export default function Home() {
                 <Padded>
                     <Support />
                 </Padded>
+                <Divider />
             </div>
         </main>
     );
