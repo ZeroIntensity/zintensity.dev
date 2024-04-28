@@ -4,6 +4,7 @@ import Projects from "./projects";
 import Divider from "./divider";
 import Support from "./support";
 import { ReactNode } from "react";
+import Copyright from "./copyright";
 
 const Padded = ({ children }: { children: ReactNode }) => (
     <div className="px-8 lg:px-16">{children}</div>
@@ -25,6 +26,9 @@ export default function Home() {
                     <Support />
                 </Padded>
                 <Divider />
+                <Padded>
+                    <Copyright />
+                </Padded>
             </div>
         </main>
     );

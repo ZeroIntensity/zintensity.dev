@@ -26,7 +26,13 @@ export function Header() {
                         <FaGithub className="text-white h-10 w-10 xl:h-16 xl:w-16 group-hover:opacity-50 transition-all backdrop-blur-sm" />
                     </a>
                     <button className="group">
-                        <FaDiscord className="text-white h-10 w-10 xl:h-16 xl:w-16 group-hover:opacity-50 transition-all backdrop-blur-sm" />
+                        <a
+                            className="group"
+                            href="https://discord.gg/vr4npT5QU9"
+                            target="_blank"
+                        >
+                            <FaDiscord className="text-white h-10 w-10 xl:h-16 xl:w-16 group-hover:opacity-50 transition-all backdrop-blur-sm" />
+                        </a>
                     </button>
                     <a className="group" href="mailto:zintensitydev@gmail.com">
                         <MdEmail className="text-white h-10 w-10 xl:h-16 xl:w-16 group-hover:opacity-50 transition-all backdrop-blur-sm" />
@@ -46,7 +52,11 @@ export function Header() {
                     I'm a software engineer from the United States.
                 </div>
                 <div className="flex items-center space-x-3">
-                    <Button>
+                    <Button
+                        onClick={() =>
+                            document.getElementById("about")!.scrollIntoView()
+                        }
+                    >
                         <p className="text-lg">About Me</p>
                     </Button>
                 </div>

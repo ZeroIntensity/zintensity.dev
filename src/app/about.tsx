@@ -62,7 +62,10 @@ export default function About() {
     const stats = use(getGitHubStats());
 
     return (
-        <section className="flex lg:flex-row flex-col lg:items-center lg:justify-between w-full">
+        <section
+            className="flex lg:flex-row flex-col lg:items-center lg:justify-between w-full"
+            id="about"
+        >
             <AboutHeader />
             <Statistics {...stats} />
         </section>

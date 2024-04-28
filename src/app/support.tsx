@@ -4,7 +4,6 @@ import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { FaCheckCircle } from "react-icons/fa";
 import { ReactNode } from "react";
 import { FaCircleXmark } from "react-icons/fa6";
-import { FaDiscord } from "react-icons/fa6";
 
 function Check({ children }: { children: ReactNode }) {
     return (
@@ -38,7 +37,7 @@ function Card(props: CardProps) {
         <BackgroundGradient
             className="rounded-[22px] w-full p-4 bg-white dark:bg-zinc-950"
             colorCycle={props.colorCycle}
-            blurClass="blur"
+            blurClass="blur-xl"
         >
             <div className="flex space-x-3 items-center">
                 <h3 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-zinc-50 to-zinc-500 bg-opacity-50">
@@ -82,64 +81,13 @@ function Card(props: CardProps) {
     );
 }
 
-function CustomCard({ children }: { children: ReactNode }) {
-    return (
-        <BackgroundGradient
-            className="rounded-[22px] w-full p-4 bg-white dark:bg-zinc-950"
-            colorCycle={4}
-            blurClass="blur"
-        >
-            <div className="flex space-x-3 items-center">
-                <h3 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-zinc-50 to-zinc-500 bg-opacity-50">
-                    $250+
-                </h3>
-                <BackgroundGradient
-                    className="rounded-[22px] w-full p-1 px-2 font-bold"
-                    colorCycle={4}
-                    blurClass="blur-sm"
-                >
-                    Custom
-                </BackgroundGradient>
-            </div>
-            <div className="h-64">
-                <p className="font-bold">
-                    For anything larger than a month of development time.
-                </p>
-                <div className="flex flex-col py-2">
-                    <p>Examples:</p>
-                    <div className="flex flex-col">{children}</div>
-                </div>
-            </div>
-
-            <div className="px-4 py-2">
-                <a
-                    href="https://github.com/sponsors/ZeroIntensity?frequency=one-time"
-                    target="_blank"
-                >
-                    <BackgroundGradient
-                        className="rounded-[22px] w-full font-bold bg-zinc-950 p-2 text-center text-xl hover:bg-transparent transition-all duration-300"
-                        padding="p-[2px]"
-                        colorCycle={4}
-                        blurClass="blur-none"
-                    >
-                        <div className="flex space-x-1 items-center justify-center">
-                            <FaDiscord className="h-6 w-6" />
-                            <span>Contact Me</span>
-                        </div>
-                    </BackgroundGradient>
-                </a>
-            </div>
-        </BackgroundGradient>
-    );
-}
-
 export default function Support() {
     return (
         <section className="flex flex-col">
             <h2 className="text-left text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-zinc-50 to-zinc-500 bg-opacity-50">
                 Hire Me
             </h2>
-            <div className="grid grid-cols-1 xl:grid-cols-4 auto-rows-fr gap-12 lg:gap-6 xl:gap-10 py-12">
+            <div className="grid grid-cols-1 xl:grid-cols-3 auto-rows-fr gap-12 lg:gap-6 xl:gap-24 py-12">
                 <Card
                     amount={25}
                     package="Small"
@@ -171,11 +119,8 @@ export default function Support() {
                 >
                     <Check>Fullstack web application.</Check>
                     <Check>A custom-made library.</Check>
-                    <X>Fullstack website.</X>
-                </Card>
-                <CustomCard>
                     <Check>Anything you can dream up!</Check>
-                </CustomCard>
+                </Card>
             </div>
         </section>
     );
