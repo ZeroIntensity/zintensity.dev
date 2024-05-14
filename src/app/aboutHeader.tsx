@@ -8,7 +8,7 @@ export default function AboutHeader() {
             </h2>
             <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 py-4 w-2/3">
                 My name is <Highlight className="font-bold">Peter</Highlight>.
-                I'm 15 years old and enjoy writing software. <br />I build
+                I'm 16 years old and enjoy writing software. <br />I build
                 things because{" "}
                 <Highlight className="font-bold">
                     I have fun building them
