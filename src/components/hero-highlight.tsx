@@ -68,29 +68,13 @@ export const Highlight = ({
     className?: string;
 }) => {
     return (
-        <motion.span
-            initial={{
-                backgroundSize: "0% 100%",
-            }}
-            animate={{
-                backgroundSize: "100% 100%",
-            }}
-            transition={{
-                duration: 2,
-                ease: "linear",
-                delay: 0.5,
-            }}
-            style={{
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "left center",
-                display: "inline",
-            }}
+        <span
             className={cn(
                 `relative inline-block pb-1 px-1 rounded-lg bg-gradient-to-r dark:from-blue-500 dark:to-blue-700`,
                 className
             )}
         >
             {children}
-        </motion.span>
+        </span>
     );
 };

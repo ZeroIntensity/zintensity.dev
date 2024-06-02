@@ -38,7 +38,7 @@ export default function Projects() {
     const { pointersStars, viewStars } = use(getRepos());
 
     return (
-        <section className="flex flex-col">
+        <section className="flex flex-col" id="projects">
             <ProjectHeader />
             <ProjectList pointersStars={pointersStars} viewStars={viewStars} />
         </section>

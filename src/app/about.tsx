@@ -63,7 +63,7 @@ export default function About() {
 
     return (
         <section
-            className="flex lg:flex-row flex-col lg:items-center lg:justify-between w-full"
+            className="flex lg:flex-row flex-col items-center justify-center lg:justify-between w-full"
             id="about"
         >
             <AboutHeader />
