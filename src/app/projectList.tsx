@@ -102,7 +102,7 @@ export default function ProjectList({
                 />
             </Card>
             <Card
-                title="Beautiful prompts for Python."
+                title="Beautiful prompts for Python"
                 name="prompts.py"
                 url="https://github.com/ZeroIntensity/prompts.py"
             >
