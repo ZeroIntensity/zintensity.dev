@@ -102,9 +102,9 @@ export default function ProjectList({
                 />
             </Card>
             <Card
-                title="Make your Python strings mutable"
-                name="mutstring"
-                url="https://github.com/ZeroIntensity/mutstring"
+                title="Beautiful prompts for Python."
+                name="prompts.py"
+                url="https://github.com/ZeroIntensity/prompts.py"
             >
                 <CanvasRevealEffect
                     animationSpeed={5.1}
