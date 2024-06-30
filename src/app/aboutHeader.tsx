@@ -9,7 +9,7 @@ export default function AboutHeader() {
             <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 py-4 w-full lg:w-2/3">
                 My name is <Highlight className="font-bold">Peter</Highlight>.
                 I'm 16 years old and have been writing software for about{" "}
-                <Highlight className="font-bold">7 years.</Highlight> <br />
+                <Highlight className="font-bold">7 years</Highlight>. <br />
                 <br />
                 In that time, I've built a variety of projects in many different
                 fields.
