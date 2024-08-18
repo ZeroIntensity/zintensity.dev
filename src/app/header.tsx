@@ -53,17 +53,6 @@ export function Header() {
                         I'm a software engineer from the United States.
                     </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                    <Button
-                        onClick={() =>
-                            document
-                                .getElementById("projects")!
-                                .scrollIntoView()
-                        }
-                    >
-                        <p className="text-lg">My Projects</p>
-                    </Button>
-                </div>
             </div>
         </motion.div>
     );
