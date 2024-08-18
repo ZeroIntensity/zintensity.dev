@@ -2,7 +2,6 @@ import Title from "./title";
 import About from "./about";
 import Projects from "./projects";
 import Divider from "./divider";
-import Support from "./support";
 import { ReactNode } from "react";
 import Copyright from "./copyright";
 
@@ -20,10 +19,6 @@ export default function Home() {
                 <Divider />
                 <Padded>
                     <Projects />
-                </Padded>
-                <Divider />
-                <Padded>
-                    <Support />
                 </Padded>
                 <Divider />
                 <Padded>

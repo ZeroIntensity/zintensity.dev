@@ -13,18 +13,12 @@ export default function AboutHeader() {
                     years old and have been writing software for about{" "}
                     <Highlight className="font-bold">7 years</Highlight>.
                 </p>
-                <div className="flex flex-col space-y-1 py-4">
-                    <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 w-full lg:w-2/3">
-                        Typically, I build Python libraries or maintain others,
-                        but work in other fields, such as web development, from
-                        time to time.
-                    </p>
-                    <p className="font-light dark:text-neutral-400 w-full lg:w-2/3 text-base italic">
-                        A large portion of what I write is available on GitHub.
-                    </p>
-                </div>
+                <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 w-full lg:w-2/3">
+                    Typically, I build Python libraries or maintain others, but
+                    I work in other fields from time to time.
+                </p>
                 <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 py-4 w-full lg:w-2/3">
-                    I also occasionally do some electrical engineering, as a
+                    I also occasionally do some electrical engineering as a
                     hobbyist.
                 </p>
             </div>
