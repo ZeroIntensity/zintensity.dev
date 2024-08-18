@@ -10,7 +10,7 @@ export default function ProjectList({
     viewStars: number;
 }) {
     return (
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:grid-cols-4 gap-2 lg:gap-4 py-10 lg:py-20">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 2xl:grid-cols-4 gap-2 lg:gap-4 py-10 lg:py-20">
             <Card
                 title="Bringing the hell of pointers to Python"
                 url="https://pointers.zintensity.dev"
@@ -102,9 +102,9 @@ export default function ProjectList({
                 />
             </Card>
             <Card
-                title="Make your Python strings mutable"
-                name="mutstring"
-                url="https://github.com/ZeroIntensity/mutstring"
+                title="Beautiful prompts for Python"
+                name="prompts.py"
+                url="https://github.com/ZeroIntensity/prompts.py"
             >
                 <CanvasRevealEffect
                     animationSpeed={5.1}

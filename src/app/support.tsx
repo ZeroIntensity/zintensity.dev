@@ -93,7 +93,7 @@ export default function Support() {
                     package="Small"
                     tierId={335240}
                     colorCycle={1}
-                    description="A small project with a few days of development time."
+                    description="A small project with a day or so of development time."
                 >
                     <Check>Web server.</Check>
                     <Check>Discord bot.</Check>
@@ -104,7 +104,7 @@ export default function Support() {
                     package="Medium"
                     tierId={335243}
                     colorCycle={2}
-                    description="A medium-scale project with a few weeks of development time."
+                    description="A medium-scale project with a few days of development time."
                 >
                     <Check>Website frontend or backend.</Check>
                     <Check>Command-line tool.</Check>
@@ -115,7 +115,7 @@ export default function Support() {
                     package="Large"
                     tierId={335244}
                     colorCycle={3}
-                    description="A large-scale project with a month or more of development time."
+                    description="A large-scale project with more than a week of development time."
                 >
                     <Check>Fullstack web application.</Check>
                     <Check>A custom-made library.</Check>
