@@ -15,7 +15,7 @@ export default function AboutHeader() {
                 </p>
                 <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 w-full lg:w-2/3">
                     Typically, I build Python libraries or maintain others, but
-                    I work in other fields from time to time.
+                    I work in other languages from time to time.
                 </p>
                 <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 py-4 w-full lg:w-2/3">
                     I also occasionally do some electrical engineering as a
