@@ -13,9 +13,14 @@ export default function AboutHeader() {
                     years old and have been writing software for about{" "}
                     <Highlight className="font-bold">7 years</Highlight>.
                 </p>
-                <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 w-full lg:w-2/3">
-                    Typically, I build Python libraries or contribute to others. I also maintain CPython upstream
-                    as a triager.
+                <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 py-4 w-full lg:w-2/3">
+                    I typically contribute to{" "}
+                    <Highlight className="font-bold">
+                        open-source libraries
+                    </Highlight>
+                    , and also work on{" "}
+                    <Highlight className="font-bold">CPython</Highlight> as a
+                    triager.
                 </p>
             </div>
         </div>
