@@ -5,7 +5,7 @@ export default function ProjectHeader() {
     return (
         <div className="flex flex-col">
             <h2 className="text-left text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-zinc-50 to-zinc-500 bg-opacity-50">
-                What have I done?
+                What do I do?
             </h2>
             <TextGenerateEffect words="Here are some of my own libraries." />
         </div>
