@@ -43,7 +43,7 @@ export default function ProjectList({
                 />
             </Card>
             <Card
-                title="CPython API for asynchronous functions"
+                title="Call asynchronous code from an extension module"
                 url="https://awaitable.zintensity.dev"
                 name="PyAwaitable"
             >
