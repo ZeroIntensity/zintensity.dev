@@ -1,6 +1,7 @@
 import { use } from "react";
 import ProjectHeader from "./projectHeader";
-import ProjectList from "./projectList";
+import PrimaryProjectList, { PriorProjectList } from "./projectList";
+import { TextGenerateEffect } from "@/components/text-generate-effect";
 
 interface StarCounts {
     pointersStars: number;
@@ -40,7 +41,12 @@ export default function Projects() {
     return (
         <section className="flex flex-col" id="projects">
             <ProjectHeader />
-            <ProjectList pointersStars={pointersStars} viewStars={viewStars} />
+            <PrimaryProjectList
+                pointersStars={pointersStars}
+                viewStars={viewStars}
+            />
+            <TextGenerateEffect words="And some of my previous ventures, either being joke libraries, or ones that I just got bored of developing." />
+            <PriorProjectList />
         </section>
     );
 }
