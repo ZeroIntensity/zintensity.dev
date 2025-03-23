@@ -18,7 +18,7 @@ export default function AboutHeader() {
                     <Highlight className="font-bold">
                         open-source libraries
                     </Highlight>
-                    , or really anything that's upstream, and I'm also a{" "}
+                    , and I'm also a{" "}
                     <Highlight className="font-bold">CPython</Highlight> triage
                     team member.
                 </p>
