@@ -45,8 +45,6 @@ export default function Projects() {
                 pointersStars={pointersStars}
                 viewStars={viewStars}
             />
-            <TextGenerateEffect words="And some of my previous ventures, either being joke libraries, or ones that I just got bored of developing." />
-            <PriorProjectList />
         </section>
     );
 }

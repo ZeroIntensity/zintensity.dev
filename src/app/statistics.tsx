@@ -70,7 +70,7 @@ export default function Statistics(props: GitHubStats) {
                         {fmt.format(props.totalStars)} GitHub Stars
                     </CardWithIcon>
                     <CardWithIcon icon={<IoGitCommitSharp />} amount={70}>
-                        {fmt.format(props.totalCommits)} Contributions
+                        {fmt.format(props.totalCommits)} Recent Contributions
                     </CardWithIcon>
                     <CardWithIcon icon={<IoIosTime />} amount={80}>
                         It's {date} my time{sleeping}
