@@ -12,7 +12,22 @@ type Repo = {
     stargazers_count: number;
 };
 
-async function getContributions() {
+export interface PullRequest {
+    repositoryName: string;
+    title: string;
+    createdAt: string;
+    merged: boolean;
+    url: string;
+}
+
+export interface OverallContributions {
+    total: number;
+    pullRequests: PullRequest[];
+}
+
+const CONTRIB_LIMIT = 16;
+
+export async function getContributions(): Promise<OverallContributions> {
     const headers = {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
     };
@@ -26,6 +41,24 @@ async function getContributions() {
                 totalRepositoryContributions
                 totalPullRequestContributions
                 totalPullRequestReviewContributions
+                pullRequestContributions(first:100) {
+      	          nodes {
+                    pullRequest {
+          	          repository {
+                        owner {
+                          login
+                        }
+                        name
+                        isPrivate
+                      }
+          	          title
+                      merged
+                      createdAt
+                      closed
+                      url
+                    }
+                  }
+                }
               }
             }
           }`,
@@ -37,13 +70,45 @@ async function getContributions() {
     });
     const data = await response.json();
     const contrib = data.data.user.contributionsCollection;
-    return (
+    const total =
         contrib.totalIssueContributions +
         contrib.totalCommitContributions +
         contrib.totalRepositoryContributions +
         contrib.totalPullRequestContributions +
-        contrib.totalPullRequestReviewContributions
-    );
+        contrib.totalPullRequestReviewContributions;
+
+    const prData: Array<any> = contrib.pullRequestContributions.nodes;
+    const pullRequests: PullRequest[] = [];
+    let contribs = 0;
+    for (const thePr of prData) {
+        if (!thePr) {
+            continue;
+        }
+        const pr = thePr.pullRequest;
+        if (pr.closed && !pr.merged) {
+            continue;
+        }
+        const repository = pr.repository;
+        if (repository.isPrivate) {
+            continue;
+        }
+
+        pullRequests.push({
+            repositoryName: `${repository.owner.login}/${repository.name}`,
+            title: pr.title,
+            createdAt: pr.createdAt,
+            merged: pr.merged,
+            url: pr.url,
+        });
+        if (++contribs == CONTRIB_LIMIT) {
+            break;
+        }
+    }
+
+    return {
+        total,
+        pullRequests,
+    };
 }
 
 async function getAllRepos(): Promise<Array<Repo>> {
@@ -70,10 +135,12 @@ async function getAllRepos(): Promise<Array<Repo>> {
     throw new Error("not possible");
 }
 
-async function getGitHubStats(): Promise<GitHubStats> {
+async function getGitHubStats(
+    contributions: OverallContributions
+): Promise<GitHubStats> {
     const repos: Array<Repo> = await getAllRepos();
 
-    let totalCommits = await getContributions();
+    let totalCommits = contributions.total;
     let totalStars = 0;
 
     for await (const repo of repos) {
@@ -86,8 +153,8 @@ async function getGitHubStats(): Promise<GitHubStats> {
     };
 }
 
-export default function About() {
-    const stats = use(getGitHubStats());
+export default function About(contributions: OverallContributions) {
+    const stats = use(getGitHubStats(contributions));
 
     return (
         <section

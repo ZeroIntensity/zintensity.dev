@@ -15,10 +15,8 @@ export default function AboutHeader() {
                 </p>
                 <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 py-4 w-full lg:w-2/3">
                     I like to contribute to{" "}
-                    <Highlight className="font-bold">
-                        open-source libraries
-                    </Highlight>
-                    , and I'm also a{" "}
+                    <Highlight className="font-bold">open-source</Highlight>,
+                    and I'm also a{" "}
                     <Highlight className="font-bold">CPython</Highlight> triage
                     team member.
                 </p>

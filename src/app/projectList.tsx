@@ -2,74 +2,7 @@
 import { CanvasRevealEffect } from "@/components/canvas-reveal-effect";
 import { Card } from "./card";
 
-export function PriorProjectList() {
-    return (
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 2xl:grid-cols-4 gap-2 lg:gap-4 py-5 lg:py-10">
-            <Card
-                title="Developer-oriented client-server communication library"
-                name="Hoist"
-                url="https://hoist.zintensity.dev"
-            >
-                <CanvasRevealEffect
-                    animationSpeed={5.1}
-                    containerClassName="bg-emerald-900"
-                    colors={[
-                        [66, 245, 123],
-                        [0, 125, 40],
-                        [156, 255, 157],
-                    ]}
-                />
-            </Card>
-            <Card
-                title="No more stupid dots"
-                name="namespaces.py"
-                url="https://github.com/ZeroIntensity/namespaces.py"
-            >
-                <CanvasRevealEffect
-                    animationSpeed={5.1}
-                    containerClassName="bg-indigo-900"
-                    colors={[
-                        [169, 115, 255],
-                        [192, 153, 255],
-                        [59, 0, 153],
-                    ]}
-                />
-            </Card>
-            <Card
-                title="Stop others from touching your privates"
-                name="privates.py"
-                url="https://privates.zintensity.dev/"
-            >
-                <CanvasRevealEffect
-                    animationSpeed={5.1}
-                    containerClassName="bg-blue-900"
-                    colors={[
-                        [41, 98, 255],
-                        [133, 165, 255],
-                        [0, 31, 120],
-                    ]}
-                />
-            </Card>
-            <Card
-                title="Beautiful prompts for Python"
-                name="prompts.py"
-                url="https://github.com/ZeroIntensity/prompts.py"
-            >
-                <CanvasRevealEffect
-                    animationSpeed={5.1}
-                    containerClassName="bg-orange-900"
-                    colors={[
-                        [255, 205, 105],
-                        [143, 86, 0],
-                        [255, 178, 122],
-                    ]}
-                />
-            </Card>
-        </div>
-    );
-}
-
-export default function primaryProjectList({
+export default function ProjectList({
     pointersStars,
     viewStars,
 }: {
@@ -77,7 +10,7 @@ export default function primaryProjectList({
     viewStars: number;
 }) {
     return (
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 2xl:grid-cols-3 gap-2 lg:gap-4 py-5 lg:py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-2 lg:gap-2 py-5 lg:py-10">
             <Card
                 title="Bringing the hell of pointers to Python"
                 url="https://pointers.zintensity.dev"
@@ -120,6 +53,21 @@ export default function primaryProjectList({
                     colors={[
                         [122, 122, 122],
                         [161, 161, 161],
+                    ]}
+                />
+            </Card>{" "}
+            <Card
+                title="Developer-oriented client-server communication library"
+                name="Hoist"
+                url="https://hoist.zintensity.dev"
+            >
+                <CanvasRevealEffect
+                    animationSpeed={5.1}
+                    containerClassName="bg-emerald-900"
+                    colors={[
+                        [66, 245, 123],
+                        [0, 125, 40],
+                        [156, 255, 157],
                     ]}
                 />
             </Card>
