@@ -69,7 +69,7 @@ function PullRequestDisplay(pullRequest: PullRequest) {
                                 <FaCodePullRequest className="text-green-500 w-6 h-6" />
                             )}
                         </div>
-                        <p className="font-light overflow-ellipsis max-w-full">
+                        <p className="font-light break-all sm:break-normal max-w-full">
                             {pullRequest.title}
                         </p>
                     </div>
