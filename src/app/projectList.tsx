@@ -44,7 +44,7 @@ export default function ProjectList({
             </Card>
             <Card
                 title="Call asynchronous code from an extension module"
-                url="https://awaitable.zintensity.dev"
+                url="https://pyawaitable.zintensity.dev"
                 name="PyAwaitable"
             >
                 <CanvasRevealEffect
