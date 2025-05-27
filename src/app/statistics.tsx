@@ -40,7 +40,7 @@ export default function Statistics(props: GitHubStats) {
             const time = moment().tz("America/Toronto");
             const hour = time.hour();
 
-            if (hour < 7 && hour > 22)
+            if (hour < 7 || hour > 22)
                 setSleeping(", I'm (hopefully) sleeping.");
 
             setDate(time.format("h:mm A"));
