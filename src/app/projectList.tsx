@@ -10,7 +10,7 @@ export default function ProjectList({
     viewStars: number;
 }) {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-2 lg:gap-2 py-5 lg:py-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-2 py-5 lg:py-10">
             <Card
                 title="Bringing the hell of pointers to Python"
                 url="https://pointers.zintensity.dev"
