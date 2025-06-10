@@ -25,7 +25,7 @@ export interface OverallContributions {
     pullRequests: PullRequest[];
 }
 
-const CONTRIB_LIMIT = 16;
+const CONTRIB_LIMIT = 32;
 
 export async function getContributions(): Promise<OverallContributions> {
     const headers = {
