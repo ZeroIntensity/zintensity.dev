@@ -90,13 +90,12 @@ function Contributions(contributions: OverallContributions) {
 }
 
 export default function Projects(contributions: OverallContributions) {
-    const { pointersStars, viewStars } = use(getRepos());
-
     return (
         <section className="flex flex-col" id="projects">
             <ProjectHeader />
-            <ProjectList pointersStars={pointersStars} viewStars={viewStars} />
-            <Contributions {...contributions} />
+            <div className="py-4">
+                <Contributions {...contributions} />
+            </div>
         </section>
     );
 }
