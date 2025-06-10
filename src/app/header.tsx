@@ -1,10 +1,18 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/moving-border";
+import { LuClipboard, LuClipboardCheck } from "react-icons/lu";
 import { FaDiscord } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { useState, useEffect } from "react";
 
 export function Header() {
+    const [copied, setCopied] = useState(false);
+    useEffect(() => {
+        setTimeout(() => {
+            setCopied(false);
+        }, 3000);
+    }, [copied]);
+
     return (
         <motion.div
             initial={{ opacity: 0.0, y: 40 }}
@@ -25,14 +33,25 @@ export function Header() {
                     >
                         <FaGithub className="text-white h-10 w-10 md:h-16 md:w-16 group-hover:opacity-50 transition-all backdrop-blur-sm" />
                     </a>
-                    <button className="group">
-                        <a
-                            className="group"
-                            href="https://discord.gg/vr4npT5QU9"
-                            target="_blank"
-                        >
-                            <FaDiscord className="text-white h-10 w-10 md:h-16 md:w-16 group-hover:opacity-50 transition-all backdrop-blur-sm" />
-                        </a>
+                    <button
+                        className="relative group"
+                        onClick={() => {
+                            navigator.clipboard.writeText("zerointensity");
+                            setCopied(true);
+                        }}
+                    >
+                        <FaDiscord className="text-white h-10 w-10 md:h-16 md:w-16 group-hover:opacity-50 transition-all backdrop-blur-sm" />
+
+                        <div className="transition-all duration-300 group-hover:opacity-100 flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2 bottom-full mb-1 opacity-0 bg-black border border-zinc-950 text-white text-xs rounded py-1 px-2 z-10">
+                            {copied ? (
+                                <LuClipboardCheck className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
+                            ) : (
+                                <LuClipboard className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
+                            )}
+                            <span className="text-sm md:text-base lg:text-lg font-medium">
+                                {copied ? "Copied!" : "zerointensity"}
+                            </span>
+                        </div>
                     </button>
                     <a className="group" href="mailto:zintensitydev@gmail.com">
                         <MdEmail className="text-white h-10 w-10 md:h-16 md:w-16 group-hover:opacity-50 transition-all backdrop-blur-sm" />
