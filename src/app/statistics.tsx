@@ -32,16 +32,12 @@ function CardWithIcon({
 
 export default function Statistics(props: GitHubStats) {
     const [date, setDate] = useState("???");
-    const [sleeping, setSleeping] = useState("");
     const fmt = new Intl.NumberFormat();
 
     useEffect(() => {
         setInterval(() => {
             const time = moment().tz("America/Toronto");
             const hour = time.hour();
-
-            if (hour < 7 || hour > 22)
-                setSleeping(", I'm (hopefully) sleeping.");
 
             setDate(time.format("h:mm A"));
         }, 1000);
@@ -67,13 +63,13 @@ export default function Statistics(props: GitHubStats) {
                     </CardItem>
 
                     <CardWithIcon icon={<FaStar />}>
-                        {fmt.format(props.totalStars)} GitHub Stars
+                        {fmt.format(props.totalStars)} GitHub stars
                     </CardWithIcon>
                     <CardWithIcon icon={<IoGitCommitSharp />} amount={70}>
-                        {fmt.format(props.totalCommits)} Recent Contributions
+                        {fmt.format(props.totalCommits)} Recent contributions
                     </CardWithIcon>
                     <CardWithIcon icon={<IoIosTime />} amount={80}>
-                        It's {date} my time{sleeping}
+                        It's {date} my time.
                     </CardWithIcon>
                 </div>
             </CardBody>

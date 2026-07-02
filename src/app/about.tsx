@@ -28,6 +28,12 @@ export interface OverallContributions {
 const CONTRIB_LIMIT = 32;
 
 export async function getContributions(): Promise<OverallContributions> {
+    if (process.env.GITHUB_TOKEN == undefined) {
+        return {
+            total: 0,
+            pullRequests: [],
+        };
+    }
     const headers = {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
     };
@@ -123,7 +129,7 @@ async function getAllRepos(): Promise<Array<Repo>> {
                     headers: {
                         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
                     },
-                }
+                },
             )
         ).json();
         repos = repos.concat(json);
@@ -136,7 +142,7 @@ async function getAllRepos(): Promise<Array<Repo>> {
 }
 
 async function getGitHubStats(
-    contributions: OverallContributions
+    contributions: OverallContributions,
 ): Promise<GitHubStats> {
     const repos: Array<Repo> = await getAllRepos();
 

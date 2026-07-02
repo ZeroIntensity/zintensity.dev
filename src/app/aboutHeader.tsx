@@ -9,15 +9,19 @@ export default function AboutHeader() {
             <div>
                 <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 py-4 w-full lg:w-2/3">
                     My name is{" "}
-                    <Highlight className="font-bold">Peter</Highlight>. I'm 18
-                    years old and have been writing software for about{" "}
-                    <Highlight className="font-bold">9 years</Highlight>.
+                    <Highlight className="font-bold">Peter</Highlight>, but I
+                    usually go by the name{" "}
+                    <Highlight className="font-bold">ZeroIntensity</Highlight>{" "}
+                    online. I'm 18 years old and have been writing software for
+                    about <Highlight className="font-bold">9 years</Highlight>.
                 </p>
                 <p className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 py-4 w-full lg:w-2/3">
                     I like to contribute to{" "}
-                    <Highlight className="font-bold">open-source</Highlight>,
-                    and I'm also a{" "}
-                    <Highlight className="font-bold">CPython</Highlight> core developer.
+                    <Highlight className="font-bold">open-source</Highlight>.
+                    I'm a <Highlight className="font-bold">CPython</Highlight>{" "}
+                    core developer, and I also work on the{" "}
+                    <Highlight className="font-bold">Nuitka</Highlight>{" "}
+                    compiler.
                 </p>
             </div>
         </div>
