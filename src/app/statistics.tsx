@@ -63,10 +63,10 @@ export default function Statistics(props: GitHubStats) {
                     </CardItem>
 
                     <CardWithIcon icon={<FaStar />}>
-                        {fmt.format(props.totalStars)} GitHub Stars
+                        {fmt.format(props.totalStars)} GitHub stars
                     </CardWithIcon>
                     <CardWithIcon icon={<IoGitCommitSharp />} amount={70}>
-                        {fmt.format(props.totalCommits)} Recent Contributions
+                        {fmt.format(props.totalCommits)} Recent contributions
                     </CardWithIcon>
                     <CardWithIcon icon={<IoIosTime />} amount={80}>
                         It's {date} my time.
